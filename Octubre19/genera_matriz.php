@@ -21,10 +21,18 @@
             for ($i = 0; $i < $numero; $i++) {
                 echo "<tr>";
                 for ($j = 0; $j < $numero; $j++) {
-                    if($j == intval($numero/2)){
-                        echo "<td>1</td>";
+                    if(intval($numero/2)%2==0){
+                        if($j%2 ==0){
+                            echo "<td>1</td>";
+                        }else{
+                            echo "<td>0</td>";
+                        }
                     }else{
-                        echo "<td>0</td>";
+                        if($j%2 ==0){
+                            echo "<td>0</td>";
+                        }else{
+                            echo "<td>1</td>";
+                        }
                     }
                 }
                 echo "</tr>";
